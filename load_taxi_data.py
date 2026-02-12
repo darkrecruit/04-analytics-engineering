@@ -17,8 +17,7 @@ BUCKET_NAME = "hw4-project-d79af39f-8a71-4f5d-812"
 # If commented initialize client with the following
 client = storage.Client(project="project-d79af39f-8a71-4f5d-812")
 
-
-BASE_URL = "https://d37ci6vzurychx.cloudfront.net/trip-data/"
+BASE_URL = "https://github.com/DataTalksClub/nyc-tlc-data/releases/download/"
 COLORS = ["green", "yellow"]
 YEARS = [2019, 2020]
 MONTHS = range(1, 13)  # Months from January to December
@@ -37,7 +36,7 @@ bucket = client.bucket(BUCKET_NAME)
 def download_file(color, year, month):
     url = f"{BASE_URL}{year}-{month:02d}.parquet"
     file_path = os.path.join(
-        DOWNLOAD_DIR, f"{color}_tripdata_{year}-{month:02d}.parquet"
+        DOWNLOAD_DIR, f"{color}/{color}_tripdata_{year}-{month:02d}.csv.gz"
     )
 
     try:
