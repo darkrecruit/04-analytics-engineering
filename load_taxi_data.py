@@ -30,11 +30,14 @@ CHUNK_SIZE = 8 * 1024 * 1024
 
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
+for color in COLORS:
+    os.makedirs(os.path.join(DOWNLOAD_DIR, color), exist_ok=True)
+
 bucket = client.bucket(BUCKET_NAME)
 
 
 def download_file(color, year, month):
-    url = f"{BASE_URL}{year}-{month:02d}.parquet"
+    url = f"{BASE_URL}{color}/{color}_tripdata_{year}-{month:02d}.csv.gz"
     file_path = os.path.join(
         DOWNLOAD_DIR, f"{color}/{color}_tripdata_{year}-{month:02d}.csv.gz"
     )
