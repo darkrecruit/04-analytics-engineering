@@ -1,0 +1,24 @@
+default:
+  outputs:
+    dev:
+      dataset: nytaxi
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: US
+      method: oauth
+      priority: interactive
+      project: project-d79af39f-8a71-4f5d-812
+      threads: 1
+      type: bigquery
+      impersonate_service_account: dbt-bigquery-service-account@project-d79af39f-8a71-4f5d-812.iam.gserviceaccount.com
+    prod:
+      dataset: nytaxi_prod
+      location: US
+      method: oauth
+      priority: interactive
+      project: project-d79af39f-8a71-4f5d-812
+      threads: 2
+      type: bigquery
+      impersonate_service_account: dbt-bigquery-service-account@project-d79af39f-8a71-4f5d-812.iam.gserviceaccount.com
+  target: dev
+  target: dev

@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw_data
+    description: "Raw data sources for NYC taxi rides"
+    database: project-d79af39f-8a71-4f5d-812 # Project ID
+    schema: nytaxi # Dataset name
+    tables:
+      - name: yellow_tripdata_partitioned
+        description: "Partitioned yellow taxi trip data"
+      - name: green_tripdata_partitioned
+        description: "Partitioned green taxi trip data"
