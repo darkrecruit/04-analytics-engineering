@@ -8,5 +8,7 @@ COPY pyproject.toml .python-version uv.lock ./
 RUN uv sync --locked
 
 COPY load_taxi_data.py .
+COPY load_fhv_data.py .
 
-ENTRYPOINT ["python", "load_taxi_data.py"]
+ENTRYPOINT ["python"]
+CMD ["load_taxi_data.py"]

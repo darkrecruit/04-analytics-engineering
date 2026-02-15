@@ -10,3 +10,5 @@ sources:
         description: "Partitioned yellow taxi trip data"
       - name: green_tripdata_partitioned
         description: "Partitioned green taxi trip data"
+      - name: fhv_tripdata_partitioned
+        description: "Partitioned for-hire vehicle trip data"

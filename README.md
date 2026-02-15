@@ -15,5 +15,8 @@ docker run -it --rm \
     -v ~/.config/gcloud:/root/.config/gcloud \
     -e GOOGLE_APPLICATION_CREDENTIALS=/root/.config/gcloud/application_default_credentials.json \
     dezoomcamp:hw4
+    load_taxi_data.py
 ```
+
+or replace `load_taxi_data.py` with `load_fhv_data.py`
 
